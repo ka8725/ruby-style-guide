@@ -1679,20 +1679,10 @@ this rule only to arrays with two or more elements.
     hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = { one: => 1, two: => 2, three: => 3 }
     ```
 
 * Avoid the use of mutable objects as hash keys.
-* Use the hash literal syntax when your hash keys are symbols.
-
-    ```Ruby
-    # bad
-    hash = { :one => 1, :two => 2, :three => 3 }
-
-    # good
-    hash = { one: 1, two: 2, three: 3 }
-    ```
-
 * Use `fetch` when dealing with hash keys that should be present.
 
     ```Ruby
